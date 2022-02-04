@@ -1,5 +1,4 @@
 <div class="cardHeader">
-  <p>{{car.id}}</p>
   <h1 class="fs-5">{{car.model}}</h1>
   <img :src="car.img" :alt="car.model">
   <h2 class="fs-6">{{car.brand}}</h2>
