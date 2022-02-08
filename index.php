@@ -14,15 +14,35 @@
 <body>
   <div id="app">
   <div class="container">
-
-    <div class="row justify-content-center">
-
-      <div class="card col-3 text-center" v-for="car in carsAvailable">
-        
-        <?php include __DIR__ . '/partials/card.php' ?>
-    
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form action="index.php">
+              <select name="brand" id="brand">
+                <option value="all">all</option>
+                <option value="Renault">Renault</option>
+                <option value="McLaren">McLaren</option>
+                <option value="Tesla">Tesla</option>
+                <option value="Audi">Audi</option>
+                <option value="Ford">Ford</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Rolls-Royce">Royce</option>
+              </select>
+              <button>cerca</button>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <div class="row justify-content-center">
+        <div class="card col-3 text-center" v-for="car in carsAvailable">
+          <?php include __DIR__ . '/partials/card.php' ?>
+        </div>
+      </div>
+    </main>
   </div>
   </div>
 <script src="js/script.js"></script>
